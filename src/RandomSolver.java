@@ -14,7 +14,7 @@ class RandomSolver {
             for (int x=0; x<9 ; x++) {
                 for (int y=0; y<9 ; y++) {
                     if (s.get(x, y)==0) {
-                        s.set(x, y, rand.nextInt((9 - 1) + 1) + 1);
+                        s.set(x, y, rand.nextInt(9) + 1);
                     }
                 }
             }
