@@ -3,7 +3,7 @@ import java.lang.*;
 
 class RandomSolver {
     
-    public static void solve (Sudoku s) {
+    public void solve (Sudoku s) {
         Random rand = new Random();
         
         while (true) {
@@ -28,6 +28,7 @@ class RandomSolver {
     }
     
     public static void main (String[] args) throws Exception {
+        RandomSolver solver = new RandomSolver();
 //        for (int i=0 ; i<100 ; i++)
 //            System.out.println((new Random()).nextInt(9));
 //        System.out.println(1/0);
@@ -39,7 +40,7 @@ class RandomSolver {
         Sudoku s = new Sudoku("8271543969.53.71.83416897525934682714.25.36.96189724357862359141.47.68.3239841567");
         s.print();
         long t0 = System.nanoTime();
-        solve(s);
+        solver.solve(s);
         long t1 = System.nanoTime();
         s.print();
         float stime = ((float) (t1-t0))/1000000000;
